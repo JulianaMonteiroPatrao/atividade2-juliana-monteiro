@@ -1,0 +1,14 @@
+<div class="container">
+  <h1>Condicional</h1>
+  <hr>
+  <div class="mb-1">
+    <label for="num" class="form-label">Escolha um número:</label>
+    <input type="number" class="form-control" [(ngModel)]="num">
+  </div>
+  <div *ngIf="ehImpar(); else elseBlock">
+    O número {{num}} é ímpar.
+  </div>
+  <ng-template #elseBlock>
+    O número {{num}} é par.
+  </ng-template>
+</div>

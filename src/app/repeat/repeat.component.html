@@ -1,0 +1,20 @@
+<div class="container">
+  <h1>Repetição</h1>
+  <hr>
+  <div class="mb-1">
+    <label for="num" class="form-label">Escolha um número:</label>
+    <input type="number" class="form-control" [(ngModel)]="num">
+  </div>
+  <p>Tabuada de {{num}}</p>
+  <table>
+    <tbody>
+      <tr *ngFor="let item of tabuada(); index as i">
+        <td>{{i+1}}</td>
+        <td>X</td>
+        <td>&nbsp;{{num}}</td>
+        <td>=</td>
+        <td>{{item}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
